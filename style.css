@@ -1,0 +1,554 @@
+/* General Body and Typography */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #FFF;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #FF6347;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FF6347;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+    color: #FFA500;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?fit=crop&w=1920&q=80') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #FFF;
+    margin: 0;
+    animation: fade-in-up 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #FFF;
+    margin: 1rem 0 2rem;
+    animation: fade-in-up 1.2s ease-out;
+}
+
+/* Call-to-action Button */
+.cta-button {
+    background-color: #FF6347;
+    color: #FFF;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #FFA500;
+}
+
+/* Glow on Hover Effect for Buttons */
+.glow-on-hover {
+    box-shadow: 0 0 5px #FF6347, 0 0 10px #FF6347, 0 0 20px #FF6347;
+    transition: box-shadow 0.3s ease;
+}
+.glow-on-hover:hover {
+    box-shadow: 0 0 10px #FFA500, 0 0 20px #FFA500, 0 0 40px #FFA500;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 10%;
+    text-align: center;
+    background-color: #222;
+    border-bottom: 1px solid #444;
+}
+
+section:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+/* Menu Section */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pizza-card {
+    background-color: #444;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5.5rem; /* Space for the button */
+}
+
+.pizza-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.pizza-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.pizza-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #FF6347;
+}
+
+.pizza-card p {
+    color: #ccc;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.pizza-card .price {
+    font-size: 1.5rem;
+    color: #FFA500;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.pizza-card .order-btn {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* About Section (Redesigned) */
+.about {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1549488347-194488b90a42?fit=crop&w=1920&q=80') center/cover fixed;
+    color: #FFF;
+    padding: 6rem 10%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fade-in 1.5s ease-out;
+}
+
+.about-content h2 {
+    color: #FFA500;
+    margin-top: 0;
+}
+
+.about-content p {
+    color: #eee;
+    font-size: 1.1rem;
+}
+
+
+/* Offers Section */
+offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.offer-card {
+    background-color: #444;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-card h3 {
+    color: #FFA500;
+    margin-top: 0;
+}
+
+.offer-card p {
+    color: #ccc;
+}
+
+.discount-price {
+    font-size: 2rem;
+    color: #FF6347;
+    font-weight: bold;
+}
+
+.discount-text {
+    font-size: 1.5rem;
+    color: #FF6347;
+    font-weight: bold;
+}
+
+.offers {
+    padding: 4rem 10%;
+    text-align: center;
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #444;
+}
+
+.offers-grid {
+    display: grid;
+    /* This creates a strict 3-column layout. Each column takes up an equal fraction of the space. */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.offer-card {
+    background-color: #444;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* This is crucial for containing the image within the border-radius */
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-card img {
+    width: 100%; /* Ensures the image takes up the full width of its parent div */
+    height: 200px; /* Gives a fixed height for a consistent look across all cards */
+    object-fit: cover; /* This is the key property. It makes the image fill the entire container while maintaining its aspect ratio, cropping as needed. */
+}
+
+.offer-card h3 {
+    color: #FFA500;
+    margin-top: 1rem;
+}
+
+.offer-card p {
+    color: #ccc;
+    padding: 0 1rem;
+}
+
+.discount-price, .discount-text {
+    font-size: 2rem;
+    color: #FF6347;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .offers-grid {
+        /* Changes to a 2-column layout on medium screens like tablets */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .offers-grid {
+        /* Stacks to a single column on small screens like phones */
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Contact Section (Redesigned) */
+/* --- Contact Page Specific Styling --- */
+
+.contact-page {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    background-color: #222;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-header h1 {
+    font-size: 3.5rem;
+    color: #FF6347;
+    text-transform: uppercase;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.contact-form-card,
+.contact-details-card {
+    background-color: #333;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid #444;
+}
+
+.contact-form-card h2,
+.contact-details-card h2 {
+    color: #FFA500;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #FF6347;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    background-color: #2a2a2a;
+    color: #FFF;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.contact-details {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-details p {
+    color: #eee;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-details i {
+    font-size: 1.2rem;
+    color: #FFA500;
+    margin-right: 1.5rem;
+    width: 25px;
+    text-align: center;
+}
+
+.social-icons-contact {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.social-icons-contact a {
+    color: #FF6347;
+    font-size: 2rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons-contact a:hover {
+    color: #FFF;
+}
+
+.map-container {
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments for desktop layout */
+@media (min-width: 992px) {
+    .contact-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Footer (Redesigned) */
+footer {
+    background-color: #111;
+    padding: 2rem 10%;
+    color: #ccc;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FF6347;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFA500;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #FFF;
+    font-size: 1.8rem;
+    margin: 0 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFA500;
+}
+
+.copyright {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-element {
+    opacity: 0;
+    animation: fade-in 1.5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%;
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-text {
+    animation: fade-in-up 1.5s ease-out forwards;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    nav ul { display: none; }
+    .hero-content p { font-size: 1.2rem; }
+}

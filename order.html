@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Pizza - Pizzeria Royale</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styling for the order page */
+        .order-page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #333;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .order-form-wrapper {
+            max-width: 600px;
+            width: 100%;
+            background: #444;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            animation: fade-in 1.5s ease-out;
+        }
+
+        .order-form-wrapper h2 {
+            text-align: center;
+            color: #FF6347;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #FF6347;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #555;
+            background-color: #2a2a2a;
+            color: #FFF;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        
+        .order-btn-back {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #FF6347;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .order-btn-back:hover {
+            color: #FFA500;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-page-container">
+        <div class="order-form-wrapper">
+            <h2>Place Your Order</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="pizza-type">Pizza Type</label>
+                    <select id="pizza-type" name="pizza-type" required>
+                        <option value="">--Select a Pizza--</option>
+                        <option value="margherita">Margherita</option>
+                        <option value="pepperoni">Pepperoni Feast</option>
+                        <option value="veggie">Veggie Supreme</option>
+                        <option value="hawaiian">Hawaiian Paradise</option>
+                        <option value="meat-lovers">Meat Lovers</option>
+                        <option value="bbq-chicken">BBQ Chicken</option>
+                        <option value="mediterranean">Mediterranean</option>
+                        <option value="buffalo-chicken">Buffalo Chicken</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-button glow-on-hover">Confirm Order</button>
+            </form>
+            <a href="idex.html" class="order-btn-back">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
